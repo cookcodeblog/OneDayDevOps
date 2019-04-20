@@ -13,6 +13,12 @@ yum install -y curl policycoreutils-python openssh-server
 
 ../tsinghua/use_tsinghua_gitlab_repo.sh
 
-EXTERNAL_URL="http://gitlab.xdevops.cn" yum install -y gitlab-ce
+# Change as your GitLab URL
+GITLAB_URL="http://gitlab.xdevops.cn"
+EXTERNAL_URL="${GITLAB_URL}" yum install -y gitlab-ce
 
 ../utils/open_firewall_port.sh 80
+
+echo "GitLab URL: ${GITLAB_URL}"
+echo "Please open GitLab in browser and reset password to continue configuration"
+
