@@ -63,3 +63,14 @@ Or install Jenkins by Jenkins mirror:
 ```bash
 ./components/jenkins/install_jenkins_rpm.sh
 ```
+
+
+
+## Install GitLab CE
+
+Install GitLab CE with HTTP:
+
+```bash
+./components/gitlab/install_gitlab_ce_http.sh
+```
+
