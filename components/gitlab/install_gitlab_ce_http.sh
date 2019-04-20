@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Locate shell script path
 SCRIPT_DIR=$(dirname $0)
 if [ ${SCRIPT_DIR} != '.' ]
@@ -13,12 +15,10 @@ yum install -y curl policycoreutils-python openssh-server
 
 ../tsinghua/use_tsinghua_gitlab_repo.sh
 
-# Change as your GitLab URL
-GITLAB_URL="http://gitlab.xdevops.cn"
+GITLAB_DOMAIN="$1"
+GITLAB_URL="http://${GITLAB_DOMAIN}"
 EXTERNAL_URL="${GITLAB_URL}" yum install -y gitlab-ce
 
 ../utils/open_firewall_port.sh 80
 
-echo "GitLab URL: ${GITLAB_URL}"
-echo "Please open GitLab in browser and reset password to continue configuration"
-
+./post_install_gitlab.sh "${GITLAB_URL}"

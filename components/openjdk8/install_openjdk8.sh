@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 yum -y install java-1.8.0-openjdk java-1.8.0-openjdk-devel
 
 cat > /etc/profile.d/java8.sh <<EOF

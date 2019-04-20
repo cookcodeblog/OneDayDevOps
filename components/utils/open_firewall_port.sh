@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 PORT=$1
 
 firewall-cmd --list-all

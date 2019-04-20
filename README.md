@@ -71,7 +71,22 @@ Or install Jenkins by Jenkins mirror:
 Install GitLab CE with HTTP:
 
 ```bash
-# Change as your GITLAB_URL in below script before run it
-./components/gitlab/install_gitlab_ce_http.sh
+# ./components/gitlab/install_gitlab_ce_http.sh gitlab.xdevops.cn
+./components/gitlab/install_gitlab_ce_http.sh <gitlab_domain>
 ```
+
+Install GitLab CE with HTTPS:
+
+```bash
+# ./components/gitlab/install_gitlab_ce_https.sh gitlab.xdevops.cn
+./components/gitlab/install_gitlab_ce_https.sh <gitlab_domain>
+```
+
+Configure HTTPS for an existing HTTP GitLab CE:
+```bash
+# ./components/gitlab/configure_gitlab_ce_https.sh gitlab.xdevops.cn
+./components/gitlab/configure_gitlab_ce_https.sh <gitlab_domain>
+```
+
+
 
