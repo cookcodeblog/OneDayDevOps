@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-yum install git
+yum install git -y
 git --version

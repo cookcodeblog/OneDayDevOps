@@ -9,15 +9,17 @@ Build a DevOps platform in one day using open source components
 ## Install Git
 
 ```bash
-yum install git
+yum install git -y
 git --version
 ```
 
 ## Clone OneDayDevOps
+
+Run below commands on an empty directory:
 ```bash
 git clone https://github.com/cookcodeblog/OneDayDevOps.git
 cd OneDayDevOps
-chmod -R u+x *.sh
+find . -name '*.sh' -exec chmod u+x {} \;
 ```
 
 
@@ -25,8 +27,7 @@ chmod -R u+x *.sh
 ## Use Aliyun Yum repo
 
 ```bash
-cd components/aliyun
-./use_aliyun_yum_repo.sh
+./components/aliyun/use_aliyun_yum_repo.sh
 ```
 
 
@@ -34,8 +35,7 @@ cd components/aliyun
 ## Install OpenJDK8
 
 ```bash
-cd components/openjdk8
-./install_openjdk8.sh
+./components/openjdk8/install_openjdk8.sh
 ```
 
 ## Install Jenkins
@@ -45,13 +45,11 @@ cd components/openjdk8
 Install Jenkins by Jenkins Yum repo:
 
 ```bash
-cd components/jenkins
-./install_jenkins.sh
+./components/jenkins/install_jenkins.sh
 ```
 
 Install Jenkins by Jenkins mirror:
 
 ```bash
-cd components/jenkins
-./install_jenkins_rpm.sh
+./components/jenkins/install_jenkins_rpm.sh
 ```
