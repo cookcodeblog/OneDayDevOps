@@ -6,14 +6,16 @@ Build a DevOps platform in one day using open source components
 
 
 
-## Install Git
+## Get started
+
+### Install Git
 
 ```bash
 yum install git -y
 git --version
 ```
 
-## Clone OneDayDevOps
+### Clone OneDayDevOps
 
 Run below commands on an empty directory:
 ```bash
@@ -24,7 +26,7 @@ find . -name '*.sh' -exec chmod u+x {} \;
 
 
 
-## Use Aliyun Yum repo
+### Use Aliyun Yum repo
 
 ```bash
 ./components/aliyun/use_aliyun_yum_repo.sh
@@ -32,7 +34,7 @@ find . -name '*.sh' -exec chmod u+x {} \;
 
 
 
-## Install tools
+### Install tools
 
 Install some basic tools, e.g. wget, vim, etc.
 
@@ -40,7 +42,7 @@ Install some basic tools, e.g. wget, vim, etc.
 ./components/tools/install_tools.sh
 ```
 
-## Install OpenJDK8
+### Install OpenJDK8
 
 ```bash
 ./components/openjdk8/install_openjdk8.sh
