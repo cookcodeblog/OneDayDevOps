@@ -32,6 +32,14 @@ find . -name '*.sh' -exec chmod u+x {} \;
 
 
 
+## Install tools
+
+Install some basic tools, e.g. wget, vim, etc.
+
+```bash
+./components/tools/install_tools.sh
+```
+
 ## Install OpenJDK8
 
 ```bash
@@ -48,7 +56,7 @@ Install Jenkins by Jenkins Yum repo:
 ./components/jenkins/install_jenkins.sh
 ```
 
-Install Jenkins by Jenkins mirror:
+Or install Jenkins by Jenkins mirror:
 
 ```bash
 ./components/jenkins/install_jenkins_rpm.sh
