@@ -4,7 +4,7 @@
 
 Build a DevOps platform in one day using open source components
 
-
+Blog: [OneDayDevOps: One click deploy a DevOps platform](https://blog.csdn.net/nklinsirui/article/details/89416151)
 
 ## Get started
 
