@@ -78,14 +78,14 @@ Install GitLab CE with HTTP:
 Install GitLab CE with HTTPS:
 
 ```bash
-# ./components/gitlab/install_gitlab_ce_https.sh gitlab.xdevops.cn
-./components/gitlab/install_gitlab_ce_https.sh <gitlab_domain>
+# ./components/gitlab/install_gitlab_ce_https.sh gitlab.xdevops.cn admin@xdevops.cn
+./components/gitlab/install_gitlab_ce_https.sh <gitlab_domain> <cert_renew_notify_email>
 ```
 
 Configure HTTPS for an existing HTTP GitLab CE:
 ```bash
-# ./components/gitlab/configure_gitlab_ce_https.sh gitlab.xdevops.cn
-./components/gitlab/configure_gitlab_ce_https.sh <gitlab_domain>
+# ./components/gitlab/configure_gitlab_ce_https.sh admin@xdevops.cn
+./components/gitlab/configure_gitlab_ce_https.sh <cert_renew_notify_email>
 ```
 
 

@@ -9,9 +9,6 @@ then
   cd ${SCRIPT_DIR}
 fi
 
-GITLAB_DOMAIN="$1"
-GITLAB_URL="https://${GITLAB_DOMAIN}"
-
 ../utils/open_firewall_port.sh 443
 
 # Backup GitLab configuration
@@ -25,7 +22,7 @@ cp -p /etc/gitlab/gitlab.rb /etc/gitlab/gitlab.rb.bak$(date '+%Y%m%d%H%M%S')
 ../utils/replace_in_file.sh /etc/gitlab/gitlab.rb "\# letsencrypt\['enable'\] = false" "letsencrypt\['enable'\] = true"
 
 # Configure certificate renew notification email
-CERT_RENEW_NOTIFY_EMAIL="$2"
+CERT_RENEW_NOTIFY_EMAIL="$1"
 ../utils/replace_in_file.sh /etc/gitlab/gitlab.rb "\# letsencrypt\['contact_emails'\] = \[\]" "letsencrypt\['contact_emails'\] = \[\'${CERT_RENEW_NOTIFY_EMAIL}\'\]"
 
 # Auto renew certification

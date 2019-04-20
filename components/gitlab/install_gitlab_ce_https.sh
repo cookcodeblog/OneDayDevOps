@@ -9,7 +9,9 @@ then
   cd ${SCRIPT_DIR}
 fi
 
-./install_gitlab_ce_http.sh
-
 GITLAB_DOMAIN="$1"
-./configure_gitlab_ce_https.sh "${GITLAB_DOMAIN}"
+CERT_RENEW_NOTIFY_EMAIL="$2"
+
+./install_gitlab_ce_http.sh "${GITLAB_DOMAIN}"
+
+./configure_gitlab_ce_https.sh "${CERT_RENEW_NOTIFY_EMAIL}"
