@@ -96,7 +96,6 @@ Configure HTTPS for an existing HTTP GitLab CE using manual SSL cert:
 echo "$(./components/utils/get_ip.sh) <gitlab_domain>" >> /etc/hosts
 
 # ./components/gitlab/configure_gitlab_ce_manual_ssl.sh gitlab.xdevops.cn "/C=CN/ST=Guangdong/L=Guangzhou/O=xdevops/OU=xdevops/CN=gitlab.xdevops.cn"
-
 ./components/gitlab/configure_gitlab_ce_manual_ssl.sh <gitlab_domain> <ssl_cert_subj>
 ```
 
