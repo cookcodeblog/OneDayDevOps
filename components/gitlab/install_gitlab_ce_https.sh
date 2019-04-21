@@ -10,6 +10,7 @@ then
 fi
 
 GITLAB_DOMAIN="$1"
+SSL_CERT_SUBJ="$2"
 
 yum install -y curl policycoreutils-python openssh-server
 
@@ -24,6 +25,6 @@ EXTERNAL_URL="${GITLAB_URL}" yum install -y gitlab-ce
 
 echo "$(../utils/get_ip.sh) ${GITLAB_DOMAIN}" >> /etc/hosts
 
-./configure_gitlab_ce_manual_ssl.sh "${GITLAB_DOMAIN}"
+./configure_gitlab_ce_manual_ssl.sh "${GITLAB_DOMAIN}" "${SSL_CERT_SUBJ}"
 
 ./post_install_gitlab.sh "${GITLAB_URL}"

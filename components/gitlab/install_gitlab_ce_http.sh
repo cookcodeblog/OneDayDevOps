@@ -9,13 +9,16 @@ then
   cd ${SCRIPT_DIR}
 fi
 
+GITLAB_DOMAIN="$1"
+
+
 yum install -y curl policycoreutils-python openssh-server
 
 ../utils/start_service.sh sshd
 
 ../tsinghua/use_tsinghua_gitlab_repo.sh
 
-GITLAB_DOMAIN="$1"
+
 GITLAB_URL="http://${GITLAB_DOMAIN}"
 EXTERNAL_URL="${GITLAB_URL}" yum install -y gitlab-ce
 

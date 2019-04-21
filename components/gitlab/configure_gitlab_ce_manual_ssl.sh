@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# References:
+# https://docs.gitlab.com/omnibus/settings/nginx.html#enable-https
+# Nginx Configuration:
+# /var/opt/gitlab/nginx/conf/gitlab-http.conf
 
 set -e
 
@@ -9,12 +13,17 @@ then
   cd ${SCRIPT_DIR}
 fi
 
+GITLAB_DOMAIN="$1"
+SSL_CERT_SUBJ="$2"
+
 ../utils/open_firewall_port.sh 443
 
 # Prepare self-signed SSL cert
+../ssl/create_self_signed_cert.sh "${SSL_CERT_SUBJ}"
+
 mkdir -p /etc/gitlab/ssl
 chmod 700 /etc/gitlab/ssl
-GITLAB_DOMAIN="$1"
+
 cp -f ../ssl/server.key /etc/gitlab/ssl/"${GITLAB_DOMAIN}.key"
 cp -f ../ssl/server.crt /etc/gitlab/ssl/"${GITLAB_DOMAIN}.crt"
 
