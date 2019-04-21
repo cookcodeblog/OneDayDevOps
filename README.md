@@ -58,6 +58,8 @@ Install Jenkins by Jenkins Yum repo:
 ./components/jenkins/install_jenkins.sh
 ```
 
+
+
 Or install Jenkins by Jenkins mirror:
 
 ```bash
@@ -75,18 +77,29 @@ Install GitLab CE with HTTP:
 ./components/gitlab/install_gitlab_ce_http.sh <gitlab_domain>
 ```
 
-Install GitLab CE with HTTPS:
+
+
+Install GitLab CE with HTTPS using manual SSL cert:
 
 ```bash
-# ./components/gitlab/install_gitlab_ce_https.sh gitlab.xdevops.cn admin@xdevops.cn
-./components/gitlab/install_gitlab_ce_https.sh <gitlab_domain> <cert_renew_notify_email>
-```
-
-Configure HTTPS for an existing HTTP GitLab CE:
-```bash
-# ./components/gitlab/configure_gitlab_ce_https.sh admin@xdevops.cn
-./components/gitlab/configure_gitlab_ce_https.sh <cert_renew_notify_email>
+# ./components/gitlab/install_gitlab_ce_https.sh gitlab.xdevops.cn
+./components/gitlab/install_gitlab_ce_https.sh <gitlab_domain>
 ```
 
 
+
+Configure HTTPS for an existing HTTP GitLab CE using manual SSL cert:
+
+```bash
+# Set domain name mapping in host file if necessary
+# echo "$(./components/utils/get_ip.sh) gitlab.xdevops.cn" >> /etc/hosts
+echo "$(./components/utils/get_ip.sh) <gitlab_domain>" >> /etc/hosts
+
+# ./components/gitlab/configure_gitlab_ce_manual_ssl.sh gitlab.xdevops.cn
+./components/gitlab/configure_gitlab_ce_manual_ssl.sh <gitlab_domain>
+```
+
+
+
+> Even throuh GitLab integrate Letsencrypt natively, but I have encountered a Letsencrypt error when run `gitlab-ctl reconfigure` and haven't resolved it, so I have to use manual SSL cert at this moment.
 
