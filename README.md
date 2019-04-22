@@ -42,10 +42,12 @@ Install some basic tools, e.g. wget, vim, etc.
 ./components/tools/install_tools.sh
 ```
 
-### Install OpenJDK8
+### Install OpenJDK
+
+Install OpenJDK8:
 
 ```bash
-./components/openjdk8/install_openjdk8.sh
+./components/openjdk/install_openjdk8.sh
 ```
 
 ## Install Jenkins
