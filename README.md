@@ -79,8 +79,8 @@ Or install Jenkins by Jenkins mirror:
 ./components/gradle/install_gradle.sh
 
 # Install sepecific Gradle version
-# Example: ./components/gradle/install_gradle.sh gradle-4.6
-./components/gradle/install_gradle.sh <gradle-version>
+# Example: ./components/gradle/install_gradle.sh 4.6
+./components/gradle/install_gradle.sh <version>
 ```
 
 

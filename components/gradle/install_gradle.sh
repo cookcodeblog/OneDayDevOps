@@ -13,10 +13,12 @@ fi
 ../utils/determine_java.sh
 
 # Download and install Gradle
-GRADLE_VERSION="$1"
-if [ ! -n "${GRADLE_VERSION}" ]; then
-    GRADLE_VERSION="gradle-5.4"
+VERSION="$1"
+if [ ! -n "${VERSION}" ]; then
+    VERSION="5.4"
 fi
+
+GRADLE_VERSION="gradle-${VERSION}"
 
 GRADLE_PACKAGE="${GRADLE_VERSION}-bin.zip"
 wget https://services.gradle.org/distributions/${GRADLE_PACKAGE}
