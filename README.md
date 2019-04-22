@@ -78,7 +78,7 @@ Or install Jenkins by Jenkins mirror:
 # Install default Gradle (Gradle5.4)
 ./components/gradle/install_gradle.sh
 
-# Install sepecific Gradle version
+# Install specific Gradle version
 # Example: ./components/gradle/install_gradle.sh 4.6
 ./components/gradle/install_gradle.sh <version>
 ```
@@ -91,7 +91,7 @@ Or install Jenkins by Jenkins mirror:
 # Install default Maven (Maven3.6.0)
 ./components/maven/install_maven.sh
 
-# Install sepecific Maven version
+# Install specific Maven version
 # ./components/maven/install_maven.sh 3.5.0
 ./components/maven/install_maven.sh <version>
 ```
