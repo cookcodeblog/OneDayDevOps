@@ -9,6 +9,9 @@ then
   cd ${SCRIPT_DIR}
 fi
 
+# Check if JDK is installed
+../utils/determine_java.sh
+
 
 RPM_PACKAGE=jenkins-2.164.2-1.1.noarch.rpm
 JENKINS_MIRROR_URL=https://mirrors.tuna.tsinghua.edu.cn

@@ -10,3 +10,5 @@ yum install net-tools -y
 yum install bind-utils -y
 # telnet
 yum install telnet -y
+# unizp
+yum install unizp -y

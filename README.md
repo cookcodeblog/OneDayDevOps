@@ -68,6 +68,34 @@ Or install Jenkins by Jenkins mirror:
 
 
 
+## Install Build Tools
+
+### Install Gradle
+
+```bash
+# Install default Gradle (Gradle5.4)
+./components/gradle/install_gradle.sh
+
+# Install sepecific Gradle version
+# Example: ./components/gradle/install_gradle.sh gradle-4.6
+./components/gradle/install_gradle.sh <gradle-version>
+```
+
+
+
+### Install Maven
+
+```bash
+# Install default Maven (Maven3.6.0)
+./components/maven/install_maven.sh
+
+# Install sepecific Maven version
+# ./components/maven/install_maven.sh 3.5.0
+./components/maven/install_maven.sh <version>
+```
+
+
+
 ## Install GitLab CE
 
 Install GitLab CE with HTTP:
