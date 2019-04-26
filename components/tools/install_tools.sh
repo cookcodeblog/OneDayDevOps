@@ -11,4 +11,4 @@ yum install bind-utils -y
 # telnet
 yum install telnet -y
 # unizp
-yum install unizp -y
+yum install unzip -y
