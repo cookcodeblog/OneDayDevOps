@@ -133,3 +133,28 @@ echo "$(./components/utils/get_ip.sh) <gitlab_domain>" >> /etc/hosts
 
 > Even throuh GitLab integrate Letsencrypt natively, but I have encountered a Letsencrypt error when run `gitlab-ctl reconfigure` and haven't resolved it, so I have to use manual SSL cert at this moment.
 
+
+
+## Install Docker CE
+
+Install Docker latest version:
+
+```bash
+./components/docker/install_docker_ce.sh
+```
+
+Install a Docker specific version:
+
+```bash
+# Example: ./components/docker/install_docker_ce.sh 18.03.0
+./components/docker/install_docker_ce.sh <version>
+```
+
+Install Docker 17.03.2 (older version):
+
+```bash
+./components/docker/install_docker_ce_17_03_2.sh
+```
+
+
+
