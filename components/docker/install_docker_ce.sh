@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#!/usr/bin/env bash
-
 set -e
 
 # Locate shell script path
@@ -18,7 +16,7 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 yum makecache fast
 
 VERSION="$1"
-if [ -n "$JAVA_HOME" ] ; then
+if [ -n "$VERSION" ] ; then
     yum -y install docker-ce-"${VERSION}.ce"
 else
     yum -y install docker-ce
