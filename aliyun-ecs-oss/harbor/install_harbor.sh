@@ -21,3 +21,6 @@ HOST_NAME=$(../../components/utils/get_ip.sh)
 cd /opt/harbor && sudo ./install.sh
 
 echo "Harbor URL: http://${HOST_NAME}"
+
+# Harbor will be auto restarted by docker-compose when reboot server
+# So don't need add Harbor into `systemd` service
