@@ -10,7 +10,7 @@ then
 fi
 
 
-yum install ../downloads/docker/docker*.rpm -y
+yum install /downloads/packages/docker/docker*.rpm -y
 
 
 ../../components/utils/start_service.sh docker

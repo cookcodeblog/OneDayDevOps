@@ -14,7 +14,7 @@ fi
 
 ../../components/utils/open_firewall_port.sh 8080
 
-echo "Jenkins URL: http://$(../utils/get_ip.sh):8080"
+echo "Jenkins URL: http://$(../../components/utils/get_ip.sh):8080"
 
 # wait 1 minute until Jenkins is ready
 sleep 60

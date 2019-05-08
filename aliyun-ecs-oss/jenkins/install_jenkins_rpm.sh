@@ -12,6 +12,6 @@ fi
 # Check if JDK is installed
 ../../components/utils/determine_java.sh
 
-rpm -ivh ../downloads/jenkins/jenkins*.rpm
+rpm -ivh /downloads/packages/jenkins/jenkins*.rpm
 
 ./post_install_jenkins.sh

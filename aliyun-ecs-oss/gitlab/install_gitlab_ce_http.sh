@@ -21,7 +21,7 @@ yum install -y curl policycoreutils-python openssh-server
 
 if [ -n "$GITLAB_DOMAIN" ] ; then
     GITLAB_URL="http://${GITLAB_DOMAIN}"
-    EXTERNAL_URL="${GITLAB_URL}" rpm -ivh ../downloads/gitlab/gitlab*.rpm
+    EXTERNAL_URL="${GITLAB_URL}" rpm -ivh /downloads/packages/gitlab/gitlab*.rpm
 else
     echo "Please input a Giltab domain,e.g. example.gitlab.com"
     exit 1
