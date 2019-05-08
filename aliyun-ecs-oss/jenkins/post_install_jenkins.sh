@@ -10,9 +10,9 @@ then
 fi
 
 
-../utils/start_service.sh jenkins
+../../components/utils/start_service.sh jenkins
 
-../utils/open_firewall_port.sh 8080
+../../components/utils/open_firewall_port.sh 8080
 
 echo "Jenkins URL: http://$(../utils/get_ip.sh):8080"
 

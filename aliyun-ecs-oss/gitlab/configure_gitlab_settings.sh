@@ -14,7 +14,7 @@ cp -p /etc/gitlab/gitlab.rb /etc/gitlab/gitlab.rb.bak$(date '+%Y%m%d%H%M%S')
 
 # Configure Timezone
 # https://gitlab.xdevops.cn/help/workflow/timezone.md
-../utils/replace_in_file.sh /etc/gitlab/gitlab.rb "\# gitlab_rails\['time_zone'\] = 'UTC'" "gitlab_rails\['time_zone'\] = 'Asia\/Shanghai'"
+../../components/utils/replace_in_file.sh /etc/gitlab/gitlab.rb "\# gitlab_rails\['time_zone'\] = 'UTC'" "gitlab_rails\['time_zone'\] = 'Asia\/Shanghai'"
 
 # Enable GitLab Rack Attack if the GitLab is exposed in Internet
 # https://gitlab.xdevops.cn/help/security/rack_attack.md

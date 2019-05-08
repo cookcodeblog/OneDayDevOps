@@ -14,7 +14,7 @@ GITLAB_DOMAIN="$1"
 
 yum install -y curl policycoreutils-python openssh-server
 
-../utils/start_service.sh sshd
+../../components/utils/start_service.sh sshd
 
 
 # https://docs.gitlab.com/omnibus/manual_install.html
@@ -27,6 +27,6 @@ else
     exit 1
 fi
 
-../utils/open_firewall_port.sh 80
+../../components/utils/open_firewall_port.sh 80
 
 ./post_install_gitlab.sh "${GITLAB_URL}"

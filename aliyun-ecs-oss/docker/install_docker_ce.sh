@@ -10,9 +10,9 @@ then
 fi
 
 
-yum install ../downloads/docker/docker*.rpm
+yum install ../downloads/docker/docker*.rpm -y
 
 
-../utils/start_service.sh docker
+../../components/utils/start_service.sh docker
 
 docker version

@@ -10,7 +10,7 @@ then
 fi
 
 # Check if JDK is installed
-../utils/determine_java.sh
+../../components/utils/determine_java.sh
 
 rpm -ivh ../downloads/jenkins/jenkins*.rpm
 
