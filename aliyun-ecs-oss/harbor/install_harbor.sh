@@ -10,10 +10,8 @@ then
 fi
 
 
-
-cd /downloads/packages/harbor
-tar xvf harbor-offline-installer-*.tgz
-mv harbor /opt
+tar xvf /downloads/packages/harbor/harbor-offline-installer-*.tgz
+mv /downloads/packages/harbor /opt
 
 
 
