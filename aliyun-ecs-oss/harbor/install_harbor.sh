@@ -15,11 +15,11 @@ cd /downloads/packages/harbor
 tar xvf harbor-offline-installer-*.tgz
 mv harbor /opt
 
-cd /opt/harbor
+
 
 HOST_NAME=$(../../components/utils/get_ip.sh)
 ../../components/utils/replace_in_file.sh /opt/harbor/harbor.cfg "hostname = reg.mydomain.com" "hostname = ${HOST_NAME}"
 
-sudo ./install.sh
+cd /opt/harbor && sudo ./install.sh
 
 echo "Harbor URL: http://${HOST_NAME}"
