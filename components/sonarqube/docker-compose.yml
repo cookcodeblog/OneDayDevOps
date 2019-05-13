@@ -1,0 +1,30 @@
+version: "2"
+
+services:
+  sonarqube:
+    image: sonarqube:lts
+    ports:
+      - "9000:9000"
+    networks:
+      - sonarnet
+    environment:
+      - sonar.jdbc.url=jdbc:postgresql://db:5432/sonar
+    volumes:
+      - /srv/docker/sonarqube/sonarqube_conf:/opt/sonarqube/conf
+      - /srv/docker/sonarqube/sonarqube_data:/opt/sonarqube/data
+      - /srv/docker/sonarqube/sonarqube_extensions:/opt/sonarqube/extensions
+
+  db:
+    image: postgres:9.6
+    networks:
+      - sonarnet
+    environment:s
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=Sonar123
+    volumes:
+      - /srv/docker/sonarqube/postgresql:/var/lib/postgresql
+      - /srv/docker/sonarqube/postgresql_data:/var/lib/postgresql/data
+
+networks:
+  sonarnet:
+    driver: bridge
