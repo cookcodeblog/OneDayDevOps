@@ -4,6 +4,8 @@ services:
   sonarqube:
     image: sonarqube:6.7.1
     restart: always
+    depends_on:
+      - db
     ports:
       - "9000:9000"
       - "9092:9092"
