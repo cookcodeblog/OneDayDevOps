@@ -18,7 +18,7 @@ services:
     image: postgres:9.6
     networks:
       - sonarnet
-    environment:s
+    environment:
       - POSTGRES_USER=sonar
       - POSTGRES_PASSWORD=Sonar123
     volumes:
