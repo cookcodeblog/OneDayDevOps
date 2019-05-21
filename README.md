@@ -158,3 +158,14 @@ Install Docker 17.03.2 (older version):
 
 
 
+## Install Nexus
+
+```bash
+# Install default Nexus (nexus-3.16.1-02)
+./components/nexus/install_nexus.sh
+
+# Install specific Nexus version
+# ./components/nexus/install_nexus.sh 3.16.1-02
+./components/nexus/install_nexus.sh <version>
+```
+
