@@ -158,6 +158,19 @@ Install Docker 17.03.2 (older version):
 
 
 
+## Install Docker Compose
+
+```bash
+# Install default Docker Compose (Docker Compose 1.24.0)
+./components/docker-compose/install_docker_compose.sh
+
+# Install specific Docker Compose version
+# ./components/docker-compose/install_docker_compose.sh 1.24.0
+./components/docker-compose/install_docker_compose.sh <version>
+```
+
+
+
 ## Install Nexus
 
 ```bash
@@ -167,5 +180,14 @@ Install Docker 17.03.2 (older version):
 # Install specific Nexus version
 # ./components/nexus/install_nexus.sh 3.16.1-02
 ./components/nexus/install_nexus.sh <version>
+```
+
+
+
+## Install Redmine
+
+```bash
+mkdir
+cp ./components/redmine/docker-compose.yml /opt/redmine
 ```
 
