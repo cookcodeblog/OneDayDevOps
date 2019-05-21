@@ -171,6 +171,19 @@ Install Docker 17.03.2 (older version):
 
 
 
+## Install Harbor
+
+```bash
+# Install default Harbor (Harbor 1.8.0)
+./components/harbor/install_harbor.sh
+
+# Install specific Harbor version,e.g Harbor 1.7.5
+# ./components/harbor/install_harbor.sh 1.7 5
+./components/harbor/install_harbor.sh <major_version> <minor_version>
+```
+
+
+
 ## Install Nexus
 
 ```bash
