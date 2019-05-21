@@ -192,3 +192,9 @@ Install Docker 17.03.2 (older version):
 
 
 
+## Install SonarQube
+
+```bash
+./components/sonarqube/install_sonarqube.sh
+```
+
