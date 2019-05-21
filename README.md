@@ -187,7 +187,8 @@ Install Docker 17.03.2 (older version):
 ## Install Redmine
 
 ```bash
-mkdir
-cp ./components/redmine/docker-compose.yml /opt/redmine
+./components/redmine/install_redmine.sh
 ```
+
+
 
