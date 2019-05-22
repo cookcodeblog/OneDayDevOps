@@ -27,6 +27,4 @@ Restart=on-abort
 WantedBy=multi-user.target
 EOF
 
-
-
-
+systemctl daemon-reload
