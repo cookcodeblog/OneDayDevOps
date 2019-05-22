@@ -47,7 +47,6 @@ docker pull sameersbn/postgresql:9.6-4
 docker save -o images.tar sameersbn/redmine:4.0.3-1 sameersbn/postgresql:9.6-4
 
 # Import docker images
-cd /downloads/packages/redmine
 docker load -i images.tar
 
 # Check imported docker images
