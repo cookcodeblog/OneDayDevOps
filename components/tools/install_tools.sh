@@ -12,3 +12,5 @@ yum install bind-utils -y
 yum install telnet -y
 # unizp
 yum install unzip -y
+# htop instead of top
+yum install htop -y
