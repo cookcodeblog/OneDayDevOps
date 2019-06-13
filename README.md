@@ -26,6 +26,18 @@ find . -name '*.sh' -exec chmod u+x {} \;
 
 
 
+### Set `ntp` time sync
+
+```bash
+# Recommend to set ntp time sync with chrony
+./components/timedate/sync_timedate_chrony.sh
+
+# Or set ntp time sync with ntp
+./components/timedate/sync_timedate_ntp.sh
+```
+
+
+
 ### Use Aliyun Yum repo
 
 ```bash
@@ -50,7 +62,7 @@ Install OpenJDK8:
 ./components/openjdk/install_openjdk8.sh
 ```
 
-## Install Jenkins
+### Install Jenkins
 
 > Make sure OpenJDK8 is installed
 
@@ -70,7 +82,7 @@ Or install Jenkins by Jenkins mirror:
 
 
 
-## Install Build Tools
+### Install Build Tools
 
 ### Install Gradle
 
@@ -98,7 +110,7 @@ Or install Jenkins by Jenkins mirror:
 
 
 
-## Install GitLab CE
+### Install GitLab CE
 
 Install GitLab CE with HTTP:
 
@@ -135,7 +147,7 @@ echo "$(./components/utils/get_ip.sh) <gitlab_domain>" >> /etc/hosts
 
 
 
-## Install Docker CE
+### Install Docker CE
 
 Install Docker latest version:
 
@@ -158,7 +170,7 @@ Install Docker 17.03.2 (older version):
 
 
 
-## Install Docker Compose
+### Install Docker Compose
 
 ```bash
 # Install default Docker Compose (Docker Compose 1.24.0)
@@ -171,7 +183,7 @@ Install Docker 17.03.2 (older version):
 
 
 
-## Install Harbor
+### Install Harbor
 
 ```bash
 # Install default Harbor (Harbor 1.8.0)
@@ -184,7 +196,7 @@ Install Docker 17.03.2 (older version):
 
 
 
-## Install Nexus
+### Install Nexus
 
 ```bash
 # Install default Nexus (nexus-3.16.1-02)
@@ -197,7 +209,7 @@ Install Docker 17.03.2 (older version):
 
 
 
-## Install Redmine
+### Install Redmine
 
 ```bash
 ./components/redmine/install_redmine.sh
@@ -205,7 +217,7 @@ Install Docker 17.03.2 (older version):
 
 
 
-## Install SonarQube
+### Install SonarQube
 
 ```bash
 ./components/sonarqube/install_sonarqube.sh
