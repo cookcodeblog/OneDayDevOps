@@ -15,7 +15,7 @@ Example:
 
 ```bash
 # Upload to Aliyun OSS
-ossutil cp -r ./jenkins/jenkin*rpm oss://xxx-oss/paas/jenkins/
+ossutil cp -r --update ./jenkins/jenkin*rpm oss://xxx-oss/paas/jenkins/
 
 # Download from Aliyun OSS
 ossutil cp -r --update oss://xxx-oss/paas/jenkins/jenkins-2.164.2-1.1.noarch.rpm /downloads/packages/jenkins/
