@@ -26,16 +26,6 @@ find . -name '*.sh' -exec chmod u+x {} \;
 
 
 
-### Set `ntp` time sync
-
-```bash
-# Recommend to set ntp time sync with chrony
-./components/timedate/sync_timedate_chrony.sh
-
-# Or set ntp time sync with ntp
-./components/timedate/sync_timedate_ntp.sh
-```
-
 
 
 ### Use Aliyun Yum repo
@@ -53,6 +43,20 @@ Install some basic tools, e.g. wget, vim, etc.
 ```bash
 ./components/tools/install_tools.sh
 ```
+
+
+
+### Set `ntp` time sync
+
+```bash
+# Recommend to set ntp time sync with chrony
+./components/timedate/sync_timedate_chrony.sh
+
+# Or set ntp time sync with ntp
+./components/timedate/sync_timedate_ntp.sh
+```
+
+
 
 ### Install OpenJDK
 
