@@ -14,3 +14,5 @@ yum install telnet -y
 yum install unzip -y
 # htop instead of top
 yum install htop -y
+# mtr
+yum install mtr -y
