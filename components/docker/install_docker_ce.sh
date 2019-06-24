@@ -22,6 +22,7 @@ else
     yum -y install docker-ce
 fi
 
+./post_install_docker.sh
 
 ../utils/start_service.sh docker
 

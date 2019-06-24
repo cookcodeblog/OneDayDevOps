@@ -21,6 +21,8 @@ yum install -y --setopt=obsoletes=0 \
    docker-ce-17.03.2.ce-1.el7.centos.x86_64 \
    docker-ce-selinux-17.03.2.ce-1.el7.centos.noarch
 
+./post_install_docker.sh
+
 ../utils/start_service.sh docker
 
 docker version
