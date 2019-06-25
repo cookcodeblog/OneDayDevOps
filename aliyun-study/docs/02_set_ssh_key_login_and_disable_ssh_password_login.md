@@ -23,6 +23,7 @@
 
 * [Xshell配置SSH秘钥登录](https://www.cnblogs.com/ioveNature/p/7919115.html)
 * [Centos7禁用密码登录](<https://blog.csdn.net/dushu990/article/details/78834729> )
+* [SecureCRT](https://blog.csdn.net/hgcpkclwcx/article/details/78929737)
 
   
 
