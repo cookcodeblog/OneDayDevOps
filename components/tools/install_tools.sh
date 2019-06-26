@@ -16,3 +16,5 @@ yum install unzip -y
 yum install htop -y
 # mtr
 yum install mtr -y
+# tree
+yum install tree -y
