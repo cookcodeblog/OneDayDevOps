@@ -2,6 +2,8 @@
 
 set -e
 
+./install_ntp.sh
+
 # Current time
 timedatectl
 
