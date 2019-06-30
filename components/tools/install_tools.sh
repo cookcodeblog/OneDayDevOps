@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+# Skip failed install tools
 
 yum install wget -y
 yum install vim -y
