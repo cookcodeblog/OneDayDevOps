@@ -3,6 +3,12 @@
 # 更新系统、安装必要的工具和同步时间
 
 
+## 设置主机名
+
+```bash
+hostnamectl set-hostname  <hostname>
+```
+
 
 ## 更新系统
 
