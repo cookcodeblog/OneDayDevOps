@@ -18,6 +18,7 @@ cd components/docker-compose
 
 ## Install GitLab with Docker Compose
 
+Replace values in `gitlab/http/docker-compose.yml`, and then run:
 ```bash
 cd gitlab/http
 ./install_gitlab_http.sh
