@@ -9,6 +9,8 @@ then
   cd ${SCRIPT_DIR}
 fi
 
+# Increase ulimit
+# ../../components/utils/increase_ulimit.sh
 
 # Open ports on Firewall
 ../../components/utils/open_firewall_port.sh 10080
