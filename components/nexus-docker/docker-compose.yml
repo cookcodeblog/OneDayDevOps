@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  nexus:
+      restart: always
+      image: sonatype/nexus3:3.17.0
+      volumes:
+        - /srv/docker/nexus/nexus-data:/nexus-data:Z
+      ports:
+        - "8081:8081"
