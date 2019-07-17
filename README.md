@@ -44,6 +44,12 @@ Install some basic tools, e.g. wget, vim, etc.
 ./components/tools/install_tools.sh
 ```
 
+## Increase ulimit
+
+```bash
+./components/utils/increase_ulimit.sh
+```
+
 
 
 ### Set `ntp` time sync
@@ -225,5 +231,11 @@ Install Docker 17.03.2 (older version):
 
 ```bash
 ./components/sonarqube/install_sonarqube.sh
+```
+
+### Install GitLab with Docker Compose
+
+```bash
+./components/gitlab-docker/install_gitlab.sh
 ```
 
