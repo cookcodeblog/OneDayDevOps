@@ -9,10 +9,8 @@ then
   cd ${SCRIPT_DIR}
 fi
 
-# Check if JDK is installed
-../utils/determine_java.sh
 
-# Download and install Maven
+# Download and install
 MAJOR_VERSION="$1"
 if [ ! -n "${VERSION}" ]; then
     MAJOR_VERSION="1.8"
