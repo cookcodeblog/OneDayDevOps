@@ -21,6 +21,11 @@ if [ ! -n "${MINOR_VERSION}" ]; then
     MINOR_VERSION="0"
 fi
 
+HTTP_PORT="$3"
+if [ ! -n "${HTTP_PORT}" ]; then
+    HTTP_PORT="80"
+fi
+
 VERSION="${MAJOR_VERSION}.${MINOR_VERSION}"
 RELEASE_PATH="release-${MAJOR_VERSION}.0"
 
@@ -33,7 +38,9 @@ mv harbor /opt
 
 
 HOST_NAME=$(../../components/utils/get_ip.sh)
-../../components/utils/replace_in_file.sh /opt/harbor/harbor.cfg "hostname = reg.mydomain.com" "hostname = ${HOST_NAME}"
+../../components/utils/replace_in_file.sh /opt/harbor/harbor.yml "hostname: reg.mydomain.com" "hostname: ${HOST_NAME}"
+../../components/utils/replace_in_file.sh /opt/harbor/harbor.yml "port: 80" "port: ${HTTP_PORT}"
+
 
 cd /opt/harbor && sudo ./install.sh
 
