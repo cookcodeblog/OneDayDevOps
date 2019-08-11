@@ -10,3 +10,6 @@ then
 fi
 
 ../docker/run_docker_without_root.sh jenkins
+
+# restart jenkins
+systemctl restart jenkins
