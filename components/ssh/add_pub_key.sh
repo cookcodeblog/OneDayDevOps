@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Run this script on target machine
 
 mkdir -p ~/.ssh

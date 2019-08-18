@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Run this script on source machine
 
 
@@ -11,6 +13,8 @@ if [ ! -d "${DIRECTORY}" ]; then
 else
   echo "~/.ssh already exist."
 fi
+
+./add_key_into_ssh_agent.sh
 
 echo "Copy SSH public key to target machine:"
 echo "scp ~/.ssh/id_rsa.pub <username>@<host>:~"
