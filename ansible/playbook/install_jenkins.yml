@@ -1,0 +1,5 @@
+---
+- hosts: jenkins_master
+  remote_user: root
+  tasks:
+  - name: ensure openjdk8 is installed

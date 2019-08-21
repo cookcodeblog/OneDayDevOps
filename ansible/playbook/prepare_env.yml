@@ -1,0 +1,5 @@
+---
+- import_playbook: use_aliyun_centos7_yum_repo.yml
+- import_playbook: use_aliyun_epel7_yum_repo.yml
+- import_playbook: increase_ulimit.yml
+- import_playbook: install_tools.yml

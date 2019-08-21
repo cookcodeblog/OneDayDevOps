@@ -1,0 +1,18 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Install some usefull tools
+    yum:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - wget
+      - vim
+      - net-tools
+      - bind-utils
+      - telnet
+      - unzip
+      - htop
+      - mtr
+      - tree

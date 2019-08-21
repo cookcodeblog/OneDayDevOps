@@ -1,0 +1,5 @@
+# Managed hosts to be installed DevOps tools
+
+[jenkins_master]
+192.168.87.156
+

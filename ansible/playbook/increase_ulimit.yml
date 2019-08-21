@@ -1,0 +1,28 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Add or modify root hard/soft nofile as 65535
+    pam_limits:
+      domain: root
+      limit_type: '-'
+      limit_item: nofile
+      value: '65535'
+  - name: Add or modify '*' hard/soft nofile as 65535
+    pam_limits:
+      domain: '*'
+      limit_type: '-'
+      limit_item: nofile
+      value: '65535'
+  - name: Add or modify root hard/soft nproc as unlimited
+    pam_limits:
+      domain: root
+      limit_type: '-'
+      limit_item: nproc
+      value: unlimited
+  - name: Add or modify '*' hard/soft nproc as unlimited
+    pam_limits:
+      domain: '*'
+      limit_type: '-'
+      limit_item: nproc
+      value: unlimited

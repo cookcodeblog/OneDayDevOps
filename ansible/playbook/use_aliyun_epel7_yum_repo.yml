@@ -1,0 +1,31 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Add Yum repo (aliyun-epel)
+    yum_repository:
+      name: aliyun-epel
+      description: Extra Packages for Enterprise Linux 7 - $basearch
+      baseurl: http://mirrors.aliyun.com/epel/7/$basearch
+      failovermethod: priority
+      enabled: 1
+      gpgcheck: 0
+      gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+  - name: Add Yum repo (aliyun-epel-debuginfo)
+    yum_repository:
+      name: aliyun-epel-debuginfo
+      description: Extra Packages for Enterprise Linux 7 - $basearch - Debug
+      baseurl: http://mirrors.aliyun.com/epel/7/$basearch/debug
+      failovermethod: priority
+      enabled: 0
+      gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+      gpgcheck: 0
+  - name: Add Yum repo (aliyun-epel-source)
+    yum_repository:
+      name: aliyun-epel-source
+      description: Extra Packages for Enterprise Linux 7 - $basearch - Source
+      baseurl: http://mirrors.aliyun.com/epel/7/SRPMS
+      failovermethod: priority
+      enabled: 0
+      gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+      gpgcheck: 0
