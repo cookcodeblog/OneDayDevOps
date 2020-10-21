@@ -14,3 +14,5 @@ source /etc/profile.d/java8.sh
 
 java -version
 javac -version
+
+echo $JAVA_HOME
